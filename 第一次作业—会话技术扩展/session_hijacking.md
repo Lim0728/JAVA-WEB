@@ -209,7 +209,7 @@ public class SubmitServlet extends HttpServlet {
 
 点击Submit，如果sessionToken的值与requestToken相同，即可提交成功，若不同，将拒绝发送且给予报错信息（图中为成功）  
 
-<img src="./img/6.png" style="width:660px;height: 320px;display: block; margin: 0 auto;" />
+<img src="./img/6.png" style="width:700px;height: 320px;display: block; margin: 0 auto;" />
 ## 2. 分布式会话管理 
 
 ### 2.1 分布式环境下的会话同步问题
