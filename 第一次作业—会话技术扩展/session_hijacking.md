@@ -3,10 +3,6 @@
 >
 >**题目:**《作业一: 会话技术内容扩展》
 >
->**姓名:** 杨芸菲
->
->**学号:** 2200210307
->
 >**班级:** 软工2204
 >
 >**日期:** 2024-09-25
@@ -141,6 +137,7 @@ CSRF (Cross-site request forgery，跨站请求伪造)也被称为One Click Atta
 1. **添加HTTP Referer：** 这个Referer字段主要是标明我们请求的来源，当我们通过一个恶意站点去访问一个可信任的站点的时候，可信任站点其实是能够识别这个请求是来自恶意站点的，因为Referer字段会标明它的来源。  
 以某一网站为例，如下图可见Referer  
 <img src="./img/3.png" style="width:630px;height: 310px;display: block; margin: 0 auto;" />
+
 站点还可以对一些敏感操作限制其Referer字段的值，比如某站点转账的时候使用：
 ```
 http:bank.example/withdraw?account=bob&amount=10000000&for=Mallory
@@ -208,8 +205,10 @@ public class SubmitServlet extends HttpServlet {
 **演示效果**  
 访问如下地址，成功响应生成Token的Servlet,并在F12窗口的中可以看到已获取到Token的值
 <img src="./img/4.png" style="width:630px;height: 310px;display: block; margin: 0 auto;" />
-<img src="./img/5.png" style="width:630px;height: 310px;display: block; margin: 0 auto;" />
-点击Submit，如果sessionToken的值与requestToken相同，即可提交成功，若不同，将拒绝发送且给予报错信息（图中为成功）
+<img src="./img/5.png" style="width:630px;height: 310px;display: block; margin: 0 auto;" />  
+
+点击Submit，如果sessionToken的值与requestToken相同，即可提交成功，若不同，将拒绝发送且给予报错信息（图中为成功）  
+
 <img src="./img/6.png" style="width:660px;height: 320px;display: block; margin: 0 auto;" />
 ## 2. 分布式会话管理 
 
@@ -231,6 +230,7 @@ public class SubmitServlet extends HttpServlet {
 优点：只需要修改nginx配置，不需要修改应用程序代码  
 缺点：session还是存在web-server中的，所以web-server重启可能导致部分session丢失，影响业务，如部分用户需要重新登录    
 <img src="./img/8.png" style="width:630px;height: 340px;display: block; margin: 0 auto;" />
+
 **参考网址：https://blog.csdn.net/weixin_44335140/article/details/112994824**
 
 ## 2.3 使用Redis等缓存技术实现分布式会话
@@ -334,7 +334,8 @@ public class Main {
 ### 3.1.1 序列化与反序列化的概念
 序列化是指将对象的状态信息转换为可以存储或传输的形式的过程。这通常涉及到将数据结构或对象转换成字节流或字符串格式。反序列化则是序列化的逆过程，即将序列化后的数据转换回原始的数据结构或对象。  
 **通过对象序列化，可以方便的实现对象的持久化储存以及在网络上的传输。大致的过程如下图所示：**
-<img src="./img/9.png" style="width:630px;height: 340px;display: block; margin: 0 auto;" />
+<img src="./img/9.png" style="width:630px;height: 340px;display: block; margin: 0 auto;" />  
+
 作者：扬俊的小屋 转载自 https://blog.csdn.net/qq_19782019/article/details/80422143
 ### 3.1.2 序列化与反序列化的区别
 - 方向性：序列化是数据从内存到存储/传输的转换，而反序列化则是从存储/传输到内存的转换。
