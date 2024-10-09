@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页示例</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 可选的 CSS 文件 -->
+    <style>
+        /*使用margin和padding进行布局*/
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            /*取消下划线*/
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+            background: white;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 5px; /* 圆角效果 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/* 阴影效果 */
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<!--用header和nav可以省去加class，在css中可以直接使用header和nav来写样式-->
+<header>
+    <h1>欢迎来到我的网站</h1>
+</header>
+
+<nav>
+    <a href="#home">首页</a>
+    <a href="#about">关于我们</a>
+    <a href="#services">服务</a>
+    <a href="#contact">联系方式</a>
+</nav>
+
+<div class="content">
+    <h2>最新消息</h2>
+    <p>这是一个简单的首页</p>
+    <p>如果您需要更多信息，请浏览我们的其他页面。</p>
+</div>
+
+<footer>
+    <!--&copy为版权信息-->
+    <p>&copy; 2024 Y版权所有</p>
+</footer>
+
+</body>
+</html>
